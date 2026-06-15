@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/northstar-warehouse/static/css/main.92cd2cfc.css",
-    "main.js": "/northstar-warehouse/static/js/main.01f23f66.js",
+    "main.js": "/northstar-warehouse/static/js/main.c8639f79.js",
     "index.html": "/northstar-warehouse/index.html",
     "main.92cd2cfc.css.map": "/northstar-warehouse/static/css/main.92cd2cfc.css.map",
-    "main.01f23f66.js.map": "/northstar-warehouse/static/js/main.01f23f66.js.map"
+    "main.c8639f79.js.map": "/northstar-warehouse/static/js/main.c8639f79.js.map"
   },
   "entrypoints": [
     "static/css/main.92cd2cfc.css",
-    "static/js/main.01f23f66.js"
+    "static/js/main.c8639f79.js"
   ]
 }
