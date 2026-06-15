@@ -8,7 +8,7 @@ function App() {
       <main>
         <div className='container flex'>
           <Routes>
-            <Route exact path='/' element={<Home />}/>
+            <Route exact path='/northstar-warehouse' element={<Home />}/>
             <Route path='*' element={<Error404 />}/>
           </Routes>
         </div>
