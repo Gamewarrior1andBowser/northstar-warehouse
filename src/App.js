@@ -4,7 +4,6 @@ import Home from './pages/Home'
 function App() {
   return (
     <>
-      <Header/>
       <main>
         <div className='container flex'>
           <Routes>
