@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/northstar-warehouse/static/css/main.31d6cfe0.css",
+    "main.js": "/northstar-warehouse/static/js/main.3ad0ab40.js",
+    "index.html": "/northstar-warehouse/index.html",
+    "main.3ad0ab40.js.map": "/northstar-warehouse/static/js/main.3ad0ab40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.3ad0ab40.js"
+  ]
+}
