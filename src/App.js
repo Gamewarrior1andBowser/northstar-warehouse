@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home'
-import Error404 from './pages/Error404'
-import Review from './pages/Review'
-import './css/review.css';
+import Home from './pages/Home';
+import Error404 from './pages/Error404';
+import Product from './pages/Product';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -11,8 +11,12 @@ function App() {
         <div className='container flex'>
           <Routes>
             <Route exact path='/northstar-warehouse' element={<Home />}/>
+
+            <Route path="/product/:id" element={<Product />} />
+
             <Route path='*' element={<Error404 />}/>
-            <Route exact path='/northstar-warehouse/Review' element={<Review />}/>
+
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </main>

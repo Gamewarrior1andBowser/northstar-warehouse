@@ -1,14 +1,19 @@
-import { Link, NavLink } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Header from "../Components/Header";
+import index from "../css/index.css";
+import ProductSection from "../Components/ProductSection";
 
 function Home() {
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
-      <h2>New Home for renovation</h2>
-      <Link to='/northstar-warehouse/Review'>See Reviews</Link>
+    <Header/>
+     
+      <section className = "hero-banner">
+         <h2>New Home for renovation</h2>
+        <p>Shop for your next adventure</p>
+
+      </section>
+      
+      <ProductSection />
     </>
   );
 }
