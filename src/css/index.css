@@ -45,6 +45,9 @@ body {
     ),
     url("../Assets/Hero-banner-Northstar.avif");
 
+}
+
+.hero-banner, .error {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,6 +125,29 @@ html {
   padding: 10px 18px;
   border-radius: 8px;
   font-weight: bold;
+}
+
+.error {
+  min-height: 90svh;
+
+  background-image:
+    linear-gradient(
+      rgba(23, 24, 32, 0.55),
+      rgba(23, 24, 32, 0.55)
+    ),
+    url("../Assets/Error.jpg");
+}
+
+.error .container {
+  text-align: center;
+}
+
+.error .container h1 {
+  margin-bottom: 50px;
+}
+
+.error .container a {
+  color: #00ffff;
 }
 
 /* Tablet */
