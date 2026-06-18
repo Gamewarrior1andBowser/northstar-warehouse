@@ -25,7 +25,7 @@ function Review() {
                 <button type='submit' >Share</button>
               <p></p>
             
-            <footer>Footer contents here</footer>
+            <footer><Link to='/northstar-warehouse'>Return Home</Link></footer>
           
           </div>
         </body>

@@ -12,6 +12,9 @@ function ProductCard({ product }) {
       <Link to={`/product/${product.id}`} className="view-btn">
         View Product
       </Link>
+
+      <ProductReview productId={product.id} productDisplay={product} />
+      
     </div>
   );
 }

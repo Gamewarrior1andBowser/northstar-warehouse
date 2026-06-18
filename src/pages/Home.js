@@ -1,6 +1,6 @@
-import Header from "../Components/Header";
+import Header from "../components/Header";
 import index from "../css/index.css";
-import ProductSection from "../Components/ProductSection";
+import ProductSection from "../components/ProductSection";
 
 function Home() {
   return (

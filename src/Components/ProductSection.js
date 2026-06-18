@@ -44,6 +44,7 @@ function ProductSection() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+
     </section>
   );
 }
