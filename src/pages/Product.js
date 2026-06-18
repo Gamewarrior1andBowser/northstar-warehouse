@@ -11,6 +11,7 @@ function Product() {
   const [similarProducts, setSimilarProducts] = useState([]);
   const [quantity, setQuantity] = useState(1);
 
+
   useEffect(() => {
     axios
       .get(`https://fakestoreapi.com/products/${id}`)
@@ -34,6 +35,17 @@ function Product() {
   if (!product) {
     return <p>Loading product...</p>;
   }
+
+  const addToCart = () => {
+  const cartProduct = {
+    ...product,
+    quantity: quantity
+  };
+
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+
+  navigate("/cart");
+}
 
   return (
     <section className="product-page">
@@ -61,10 +73,9 @@ function Product() {
               onChange={event => setQuantity(event.target.value)}
             />
           </label>
-
-          <button className="add-cart-btn">
-            Add to Cart
-          </button>
+        <button onClick={addToCart} className="add-cart-btn">
+        Add to Cart
+        </button>
         </div>
       </div>
 
