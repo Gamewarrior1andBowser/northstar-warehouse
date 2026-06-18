@@ -10,3 +10,50 @@ body {
   margin-inline: auto;
   flex-direction: column;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.hero-banner {
+  min-height: 420px;
+
+  background-image:
+    linear-gradient(
+      rgba(23, 24, 32, 0.55),
+      rgba(23, 24, 32, 0.55)
+    ),
+    url("../Assets/Hero-banner-Northstar.avif");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 50px;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
