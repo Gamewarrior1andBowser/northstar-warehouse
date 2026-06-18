@@ -10,11 +10,11 @@ function Header() {
             <nav className="navigation">
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                       <Link to="/northstar-warehouse">Home</Link>
                     </li>
 
                     <li>
-                        <Link to="/products">Products</Link>
+                       <a href="#products">Products</a>
                     </li>
 
                     <li>

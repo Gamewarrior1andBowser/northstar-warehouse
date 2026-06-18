@@ -1,5 +1,6 @@
 import Header from "../Components/Header";
-import index from "../css/index.css"
+import index from "../css/index.css";
+import ProductSection from "../Components/ProductSection";
 
 function Home() {
   return (
@@ -11,6 +12,8 @@ function Home() {
         <p>Shop for your next adventure</p>
 
       </section>
+      
+      <ProductSection />
     </>
   );
 }
