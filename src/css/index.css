@@ -10,3 +10,11 @@ body {
   margin-inline: auto;
   flex-direction: column;
 }
+
+h2 {
+  color: white;
+}
+
+a {
+  color: blue;
+}
