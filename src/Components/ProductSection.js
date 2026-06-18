@@ -2,7 +2,62 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
 
-function ProductSection() {
+// function ProductSection() {
+//   const [products, setProducts] = useState([]);
+//   const [sortType, setSortType] = useState("name");
+//   const [error, setError] = useState("");
+
+//   useEffect(() => {
+//     axios
+//       .get("https://fakestoreapi.com/products")
+//       .then(response => setProducts(response.data))
+//       .catch(() => {
+//         setError("Unable to load products.");
+//       });
+//   }, []);
+
+//   const sortedProducts = [...products].sort((a, b) => {
+//     if (sortType === "price") {
+//       return a.price - b.price;
+//     }
+
+//     return a.title.localeCompare(b.title);
+//   });
+
+//   return (
+//     <section className="products-section" id="products">
+//       <h2>Our Products</h2>
+
+//       {error && <p>{error}</p>}
+
+//       <select
+//         className="sort-select"
+//         value={sortType}
+//         onChange={event => setSortType(event.target.value)}
+//       >
+//         <option value="name">Sort by Name</option>
+//         <option value="price">Sort by Price</option>
+//       </select>
+
+//       <div className="product-grid">
+//         {sortedProducts.map(product => (
+//           <ProductCard key={product.id} product={product} />
+//         ))}
+//       </div>
+
+//     </section>
+//   );
+// }
+
+// export default ProductSection;
+
+
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import ProductCard from "./ProductCard";
+
+function ProductSection({ setSelectedProduct }) {
   const [products, setProducts] = useState([]);
   const [sortType, setSortType] = useState("name");
   const [error, setError] = useState("");
@@ -11,29 +66,25 @@ function ProductSection() {
     axios
       .get("https://fakestoreapi.com/products")
       .then(response => setProducts(response.data))
-      .catch(() => {
-        setError("Unable to load products.");
-      });
+      .catch(() => setError("Unable to load products."));
   }, []);
 
   const sortedProducts = [...products].sort((a, b) => {
     if (sortType === "price") {
       return a.price - b.price;
     }
-
     return a.title.localeCompare(b.title);
   });
 
   return (
-    <section className="products-section" id="products">
+    <section className="products-section">
       <h2>Our Products</h2>
 
       {error && <p>{error}</p>}
 
       <select
-        className="sort-select"
         value={sortType}
-        onChange={event => setSortType(event.target.value)}
+        onChange={e => setSortType(e.target.value)}
       >
         <option value="name">Sort by Name</option>
         <option value="price">Sort by Price</option>
@@ -41,10 +92,16 @@ function ProductSection() {
 
       <div className="product-grid">
         {sortedProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <div
+            key={product.id}
+            onClick={() => setSelectedProduct(product)}
+          >
+            <Link to="/product">
+              <ProductCard product={product} />
+            </Link>
+          </div>
         ))}
       </div>
-
     </section>
   );
 }

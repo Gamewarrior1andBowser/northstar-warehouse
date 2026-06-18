@@ -1,24 +1,31 @@
 import { Link } from "react-router-dom";
 
-function ProductReview( product ) {
-    return (
-        <>
-        <div className="product-overview">
-      <h3>{product.title}</h3>
-            
-      <img src={product.image} alt={product.title} />
+function ProductReview({ product }) {
+  if (!product) return null;
 
+  return (
+    <>
+      <div className="product-overview">
+        <h3>{product.title}</h3>
 
-      <p className="product-price">${product.price}</p>
-      <p className="product-category">${product.category}</p>
+        <img src={product.image} alt={product.title} />
 
-<p className="product-rating">{product.rating} </p>
-<p className="product-descriptions">{product.description} </p>
-        <Link to='/northstar-warehouse'>Return Home</Link>
-        </div>
-        
-        </>
-    )
+        <p>${product.price}</p>
+
+        <p>{product.category}</p>
+
+        <p>Rating: {product.rating?.rate}</p>
+
+        <p>{product.description}</p>
+
+        <Link to="/">Return Home</Link>
+      </div>
+
+      <textarea placeholder="Share your thoughts"></textarea>
+
+      <button type="submit">Share</button>
+    </>
+  );
 }
 
 export default ProductReview;
