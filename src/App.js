@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Error404 from './pages/Error404';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
+import Footer from  '../src/Components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           </Routes>
         </div>
       </main>
+      <Footer />
+      
     </>
   );
 }

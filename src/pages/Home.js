@@ -12,8 +12,10 @@ function Home() {
         <p>Shop for your next adventure</p>
 
       </section>
-      
+
       <ProductSection />
+
+   
     </>
   );
 }
