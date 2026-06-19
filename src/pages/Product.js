@@ -19,25 +19,48 @@ function Product() {
 };
 
 
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://fakestoreapi.com/products/${id}`)
+  //     .then(response => {
+  //       setProduct(response.data);
+
+  //       return axios.get("https://fakestoreapi.com/products");
+  //     })
+  //     .then(response => {
+  //       const similar = response.data
+  //         .filter(item => item.category === product?.category && item.id !== Number(id))
+  //         .slice(0, 4);
+
+  //       setSimilarProducts(similar);
+  //     })
+  //     .catch(() => {
+  //       navigate("/northstar-warehouse");
+  //     });
+  // }, [id, navigate, product?.category]);
+
+
   useEffect(() => {
-    axios
-      .get(`https://fakestoreapi.com/products/${id}`)
-      .then(response => {
-        setProduct(response.data);
-
-        return axios.get("https://fakestoreapi.com/products");
-      })
-      .then(response => {
-        const similar = response.data
-          .filter(item => item.category === product?.category && item.id !== Number(id))
-          .slice(0, 4);
-
-        setSimilarProducts(similar);
-      })
-      .catch(() => {
+  axios
+    .get(`https://fakestoreapi.com/products/${id}`)
+    .then(response => {
+      if (!response.data) {
         navigate("/northstar-warehouse");
-      });
-  }, [id, navigate, product?.category]);
+        return Promise.reject("not found");
+      }
+      setProduct(response.data);
+      return axios.get("https://fakestoreapi.com/products")
+        .then(allResponse => {
+          const similar = allResponse.data
+            .filter(item => item.category === response.data.category && item.id !== Number(id))
+            .slice(0, 4);
+          setSimilarProducts(similar);
+        });
+    })
+    .catch((err) => {
+      if (err !== "not found") navigate("/northstar-warehouse");
+    });
+}, [id, navigate]);
 
   if (!product) {
     return <p>Loading product...</p>;
