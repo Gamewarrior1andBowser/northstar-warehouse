@@ -89,7 +89,6 @@ html {
 }
 
 .product-card {
-  background-color: #fff;
   color: #171820;
   padding: 25px;
   border-radius: 16px;
@@ -148,6 +147,19 @@ html {
   color: #00ffff;
 }
 
+input[type='number'] {
+  border-radius: 10px;
+}
+
+.product-card, select, .product-detail, 
+.cart-item, .order-summary {
+  background-color: #dfdfdf;
+}
+
+.quantity-box span, input[type='number'] {
+  background-color: #ffffff;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
   .product-grid {
@@ -194,7 +206,6 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  background-color: #fff;
   color: #171820;
   padding: 40px;
   border-radius: 18px;
@@ -298,7 +309,6 @@ html {
 
 .cart-item,
 .order-summary {
-  background-color: #fff;
   color: #171820;
   border-radius: 14px;
   padding: 25px;
@@ -334,7 +344,6 @@ html {
   padding: 10px;
   border: none;
   text-align: center;
-  background: #fff;
 }
 
 .delete-btn,
