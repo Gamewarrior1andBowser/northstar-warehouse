@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from  '../Components/Footer';
 
 function Cart() {
   const product = JSON.parse(localStorage.getItem("cart"));
@@ -68,6 +69,7 @@ function Cart() {
           </Link>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

@@ -3,6 +3,7 @@ import Axios from '../Components/Axios'
 import '../css/review.css'
 import { Link, NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Footer from  '../Components/Footer';
 
 function Review() {
   return (
@@ -30,6 +31,7 @@ function Review() {
           </div>
         </body>
       </div>
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
+import Footer from  '../Components/Footer';
 
 function Product() {
   const { id } = useParams();
@@ -112,6 +113,7 @@ function Product() {
           ))}
         </div>
       </section>
+      <Footer />
     </section>
   );
 }
