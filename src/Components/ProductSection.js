@@ -27,6 +27,7 @@ function ProductSection() {
       <h2>Our Products</h2>
 
       <select
+        className="sort-select"
         value={sortType}
         onChange={e => setSortType(e.target.value)}
       >
