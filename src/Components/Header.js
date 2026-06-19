@@ -13,9 +13,7 @@ function Header() {
                        <Link to="/northstar-warehouse">Home</Link>
                     </li>
 
-                    <li>
-                       <a href="#products">Products</a>
-                    </li>
+                   
 
                     <li>
                         <Link to="/cart">Cart</Link>

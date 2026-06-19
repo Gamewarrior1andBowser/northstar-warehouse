@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
+import Footer from  '../Components/Footer';
+import Header from '../Components/Header';
 
 function Product() {
   const { id } = useParams();
@@ -10,6 +12,13 @@ function Product() {
   const [product, setProduct] = useState(null);
   const [similarProducts, setSimilarProducts] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [comment, setComment] = useState("");
+  const handleShare = () => {
+  if (!comment.trim()) return;
+
+  console.log("User comment:", comment);
+  setComment("");
+};
 
 
   useEffect(() => {
@@ -49,9 +58,7 @@ function Product() {
 
   return (
     <section className="product-page">
-      <Link to="/northstar-warehouse" className="back-link">
-        Back to Home
-      </Link>
+      <Header/>
 
       <div className="product-detail">
         <div className="product-image-box">
@@ -63,7 +70,9 @@ function Product() {
           <h1>{product.title}</h1>
           <p className="detail-price">${product.price}</p>
           <p className="detail-description">{product.description}</p>
-
+          <p className="ratings">
+            Rating: {product.rating?.rate} ⭐ ({product.rating?.count} reviews)
+          </p>
           <label>
             Quantity
             <input
@@ -76,6 +85,21 @@ function Product() {
         <button onClick={addToCart} className="add-cart-btn">
         Add to Cart
         </button>
+
+        <div className="user-review">
+          <textarea
+            placeholder="Share your thoughts"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+          ></textarea>
+          <button type="button" onClick={handleShare}>Share</button>
+          {/* <button
+            type="button"
+            onClick={() => setComment("")}
+          >
+            Share
+          </button> */}
+        </div>
         </div>
       </div>
 
@@ -88,6 +112,7 @@ function Product() {
           ))}
         </div>
       </section>
+      <Footer />
     </section>
   );
 }
