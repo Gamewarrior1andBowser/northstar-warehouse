@@ -10,8 +10,8 @@ function Home() {
     <Header/>
      
       <section className = "hero-banner">
-         <h2>New Home for renovation</h2>
         <p>Shop for your next adventure</p>
+        <button className="Product-btn"   a href= "#products">View Products</button>
       </section>
 
       <ProductSection />
