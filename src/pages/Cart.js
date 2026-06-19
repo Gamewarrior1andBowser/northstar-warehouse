@@ -8,21 +8,25 @@ function Cart() {
 
   if (!product) {
     return (
-      <section className="cart-page">
+      <>
         <Header/>
-        <h1>Your Cart</h1>
-        <p>Your cart is empty.</p>
+        <section className="cart-page">
+          <h1>Your Cart</h1>
+          <p>Your cart is empty.</p>
 
-        <Link to="/northstar-warehouse" className="continue-shopping">
-          Continue Shopping
-        </Link>
-      </section>
+          <Link to="/northstar-warehouse" className="continue-shopping">
+            Continue Shopping
+          </Link>
+        </section>
+        <Footer/>
+      </>
     );
   }
 
   return (
-    <section className="cart-page">
+    <>
       <Header/>
+      <section className="cart-page">
       <h1>Your Cart</h1>
 
       <div className="cart-layout">
@@ -72,8 +76,9 @@ function Cart() {
           </Link>
         </div>
       </div>
-      <Footer />
     </section>
+    <Footer />
+    </>
   );
 }
 
