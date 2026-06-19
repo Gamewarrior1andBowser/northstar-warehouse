@@ -2,14 +2,6 @@ import { Link } from "react-router-dom";
 import ProductReview
  from "./ProductReview";
 function ProductCard({ product }) {
-
-  // const productId = product.id
-  // const productDisplay = product
-  // const productTitle = product.title
-  // const productPrice = product.price
-  // const productCategory = product.category
-  // const productDescription = product.description
-
   return (
     <div className="product-card">
       <img src={product.image} alt={product.title} />

@@ -383,3 +383,27 @@ html {
     text-align: center;
   }
 }
+
+
+.user-review {
+   margin-top: 20px;
+ 
+   gap: 20px;
+  display: flex;
+  flex-direction: column;
+  button {
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(25, 48, 117);
+  }
+
+  textarea {
+    border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+    padding: 10px;
+    color: black;
+    background-color: antiquewhite;
+  }
+}

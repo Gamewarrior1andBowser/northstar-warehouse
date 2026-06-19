@@ -1,5 +1,5 @@
-import Fetch from '../components/Fetch'
-import Axios from '../components/Axios'
+import Fetch from '../Components/Fetch'
+import Axios from '../Components/Axios'
 import '../css/review.css'
 import { Link, NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';

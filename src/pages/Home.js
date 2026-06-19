@@ -1,6 +1,6 @@
-import Header from "../components/Header";
+import Header from "../Components/Header";
 import index from "../css/index.css";
-import ProductSection from "../components/ProductSection";
+import ProductSection from "../Components/ProductSection";
 
 function Home() {
   return (
@@ -10,12 +10,9 @@ function Home() {
       <section className = "hero-banner">
          <h2>New Home for renovation</h2>
         <p>Shop for your next adventure</p>
-
       </section>
 
       <ProductSection />
-
-   
     </>
   );
 }
