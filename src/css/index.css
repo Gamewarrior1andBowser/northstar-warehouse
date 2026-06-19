@@ -17,6 +17,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
+    width: 102svh;
+    justify-self: center;
+    z-index: 2;
+    background-color: rgb(19,28,53);
 }
 
 .navigation ul {
@@ -30,6 +34,7 @@ body {
 .navigation a {
     text-decoration: none;
     color: white;
+    font-size: 18px;
 }
 
 
@@ -57,7 +62,7 @@ body {
   justify-content: center;
 
   padding: 50px;
-
+  z-index: -1;
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
@@ -322,7 +327,6 @@ main {
   background-color: #101117;
   color: #fff;
   padding: 50px 20px 20px;
-
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
@@ -362,6 +366,7 @@ main {
 }
 .cart-page {
   padding: 50px 0;
+  height: 64.9svh;
 }
 
 .cart-page h1 {
@@ -417,12 +422,19 @@ main {
 
 .delete-btn,
 .checkout-btn {
- background-color: rgb(25, 48, 117);;
   color: white;
   border: none;
   padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.checkout-btn {
+  background-color: rgb(25, 48, 117);
+}
+
+.delete-btn {
+   background-color: rgb(117, 25, 25);
 }
 
 .order-summary h2 {
