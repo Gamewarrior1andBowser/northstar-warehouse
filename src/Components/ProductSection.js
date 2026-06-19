@@ -79,8 +79,6 @@ function ProductSection({ setSelectedProduct }) {
     <section className="products-section">
       <h2>Our Products</h2>
 
-      {error && <p>{error}</p>}
-
       <select
         value={sortType}
         onChange={e => setSortType(e.target.value)}
