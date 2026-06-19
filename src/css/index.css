@@ -160,6 +160,11 @@ input[type='number'] {
   background-color: #ffffff;
 }
 
+.product-grid a {
+  text-decoration: none;
+}
+
+
 /* Tablet */
 @media (max-width: 900px) {
   .product-grid {
