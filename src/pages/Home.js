@@ -1,6 +1,8 @@
 import Header from "../Components/Header";
 import index from "../css/index.css";
 import ProductSection from "../Components/ProductSection";
+import Footer from  '../Components/Footer';
+
 
 function Home() {
   return (
@@ -13,6 +15,7 @@ function Home() {
       </section>
 
       <ProductSection />
+      <Footer />
     </>
   );
 }

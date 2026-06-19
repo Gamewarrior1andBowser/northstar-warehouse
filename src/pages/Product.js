@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
+import Footer from  '../Components/Footer';
+import Header from '../Components/Header';
 
 function Product() {
   const { id } = useParams();
@@ -56,9 +58,7 @@ function Product() {
 
   return (
     <section className="product-page">
-      <Link to="/northstar-warehouse" className="back-link">
-        Back to Home
-      </Link>
+      <Header/>
 
       <div className="product-detail">
         <div className="product-image-box">
@@ -112,6 +112,7 @@ function Product() {
           ))}
         </div>
       </section>
+      <Footer />
     </section>
   );
 }

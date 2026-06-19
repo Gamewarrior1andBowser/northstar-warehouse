@@ -3,6 +3,7 @@ import Axios from '../Components/Axios'
 import '../css/review.css'
 import { Link, NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Footer from  '../Components/Footer';
 
 function Review() {
   return (
@@ -10,12 +11,12 @@ function Review() {
       <Helmet>
         <title>Reviews</title>
       </Helmet>
+      <Header/>
       <div className='container'>
         <body>
           <div className='container'>
             <header>Leave Reviews here</header>
             
-              <Link to='/northstar-warehouse'>Return Home</Link>
                 <h2>See what people think!</h2>
                 <div className='image-placeholder'></div>
                 <p></p>
@@ -30,6 +31,7 @@ function Review() {
           </div>
         </body>
       </div>
+      <Footer />
     </>
   );
 }
