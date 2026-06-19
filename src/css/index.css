@@ -322,7 +322,6 @@ main {
   background-color: #101117;
   color: #fff;
   padding: 50px 20px 20px;
-
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
@@ -362,6 +361,7 @@ main {
 }
 .cart-page {
   padding: 50px 0;
+  height: 64.9svh;
 }
 
 .cart-page h1 {
