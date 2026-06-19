@@ -10,12 +10,9 @@ function Home() {
       <section className = "hero-banner">
          <h2>New Home for renovation</h2>
         <p>Shop for your next adventure</p>
-
       </section>
 
       <ProductSection />
-
-   
     </>
   );
 }

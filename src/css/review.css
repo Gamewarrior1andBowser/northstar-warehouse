@@ -1,0 +1,57 @@
+@import './reset.css';
+
+
+/* main {
+    height: auto;
+    width: auto;
+} */
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+  flex-direction: column;
+  background-color: black;
+}
+
+body {
+  background-color: #171820;
+  color: #fff;
+}
+
+
+Header, Footer {
+    background-color: #c510a4;
+    color: white;
+    padding: 10px;
+}
+
+.image-placeholder {
+    border-radius: 10px;
+    background-color: blueviolet;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    
+    /* Want the block to be at the center. */
+}
+
+h2 {
+    color: Red;
+}
+
+button[type=submit] {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input[type=text] {
+    border-color: black;
+    /* background-color: blueviolet; */
+    margin-top: 20px;
+    height: auto;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+}
