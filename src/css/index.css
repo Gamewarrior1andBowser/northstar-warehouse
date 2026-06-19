@@ -133,6 +133,7 @@ html {
       rgba(23, 24, 32, 0.55)
     ),
     url("../Assets/Error.jpg");
+  height: 100svh;
 }
 
 .error .container {
@@ -143,8 +144,19 @@ html {
   margin-bottom: 50px;
 }
 
+.error .container h3 {
+  margin-bottom: 20px;
+}
+
 .error .container a {
-  color: #00ffff;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(25, 48, 117);;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 input[type='number'] {
