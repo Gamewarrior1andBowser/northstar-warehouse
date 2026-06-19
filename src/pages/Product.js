@@ -21,27 +21,6 @@ function Product() {
 };
 
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://fakestoreapi.com/products/${id}`)
-  //     .then(response => {
-  //       setProduct(response.data);
-
-  //       return axios.get("https://fakestoreapi.com/products");
-  //     })
-  //     .then(response => {
-  //       const similar = response.data
-  //         .filter(item => item.category === product?.category && item.id !== Number(id))
-  //         .slice(0, 4);
-
-  //       setSimilarProducts(similar);
-  //     })
-  //     .catch(() => {
-  //       navigate("/northstar-warehouse");
-  //     });
-  // }, [id, navigate, product?.category]);
-
-
   useEffect(() => {
   axios
     .get(`https://fakestoreapi.com/products/${id}`)
@@ -80,63 +59,58 @@ function Product() {
 }
 
   return (
-    <section className="product-page">
+    <>
       <Header/>
+      <section className="product-page">
+        <div className="product-detail">
+          <div className="product-image-box">
+            <img src={product.image} alt={product.title} />
+          </div>
 
-      <div className="product-detail">
-        <div className="product-image-box">
-          <img src={product.image} alt={product.title} />
+          <div className="product-info">
+            <p className="product-category">{product.category}</p>
+            <h1>{product.title}</h1>
+            <p className="detail-price">${product.price}</p>
+            <p className="detail-description">{product.description}</p>
+            <p className="ratings">
+              Rating: {product.rating?.rate} ⭐ ({product.rating?.count} reviews)
+            </p>
+            <label>
+              Quantity
+              <input
+                type="number"
+                min="1"
+                value={quantity}
+                onChange={event => setQuantity(event.target.value)}
+              />
+            </label>
+          <button onClick={addToCart} className="add-cart-btn">
+          Add to Cart
+          </button>
+
+          <div className="user-review">
+            <textarea
+              placeholder="Share your thoughts"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            ></textarea>
+            <button type="button" onClick={handleShare}>Share</button>
+          </div>
+          </div>
         </div>
 
-        <div className="product-info">
-          <p className="product-category">{product.category}</p>
-          <h1>{product.title}</h1>
-          <p className="detail-price">${product.price}</p>
-          <p className="detail-description">{product.description}</p>
-          <p className="ratings">
-            Rating: {product.rating?.rate} ⭐ ({product.rating?.count} reviews)
-          </p>
-          <label>
-            Quantity
-            <input
-              type="number"
-              min="1"
-              value={quantity}
-              onChange={event => setQuantity(event.target.value)}
-            />
-          </label>
-        <button onClick={addToCart} className="add-cart-btn">
-        Add to Cart
-        </button>
+        <section className="similar-section">
+          <h2>Similar Products</h2>
 
-        <div className="user-review">
-          <textarea
-            placeholder="Share your thoughts"
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-          ></textarea>
-          <button type="button" onClick={handleShare}>Share</button>
-          {/* <button
-            type="button"
-            onClick={() => setComment("")}
-          >
-            Share
-          </button> */}
-        </div>
-        </div>
-      </div>
-
-      <section className="similar-section">
-        <h2>Similar Products</h2>
-
-        <div className="product-grid">
-          {similarProducts.map(item => (
-            <ProductCard key={item.id} product={item} />
-          ))}
-        </div>
+          <div className="product-grid">
+            {similarProducts.map(item => (
+              <ProductCard key={item.id} product={item} />
+            ))}
+          </div>
+        </section>
       </section>
-      <Footer />
-    </section>
+      <Footer/>
+    </>
   );
 }
 
