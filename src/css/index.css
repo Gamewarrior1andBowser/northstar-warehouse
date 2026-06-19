@@ -4,6 +4,7 @@ body {
   background-color: #171820;
   color: #fff;
   overflow-x: hidden;
+  font-family: "Roboto Slab", serif;
 }
 
 
@@ -226,7 +227,7 @@ input[type='number'] {
   }
 }
 .product-page {
-  padding: 50px 0;
+  padding: 50px ;
 }
 
 .back-link {
@@ -265,7 +266,7 @@ input[type='number'] {
 
 .detail-price {
   font-weight: bold;
-  margin: 20px 0;
+  margin: 20px ;
 }
 
 .detail-description {
@@ -416,7 +417,6 @@ main {
 .quantity-box span {
   width: 43px;
   padding: 10px;
-  border: none;
   text-align: center;
 }
 
