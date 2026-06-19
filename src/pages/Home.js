@@ -11,7 +11,7 @@ function Home() {
      
       <section className = "hero-banner">
         <p>Shop for your next adventure</p>
-        <button className="Product-btn"   a href= "#products">View Products</button>
+        <button className="product-btn"   a href= "#products">View Products</button>
       </section>
 
       <ProductSection />

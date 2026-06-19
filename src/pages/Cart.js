@@ -27,7 +27,7 @@ function Cart() {
     <>
       <Header/>
       <section className="cart-page">
-      <h1>Your Cart</h1>
+      <h2>Your Cart</h2>
 
       <div className="cart-layout">
         <div className="cart-item">
