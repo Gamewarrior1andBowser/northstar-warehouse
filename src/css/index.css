@@ -154,7 +154,7 @@ html {
   }
 }
 .product-page {
-  padding: 50px 0;
+  padding: 50px ;
 }
 
 .back-link {
@@ -194,7 +194,7 @@ html {
 
 .detail-price {
   font-weight: bold;
-  margin: 20px 0;
+  margin: 20px ;
 }
 
 .detail-description {
@@ -306,7 +306,6 @@ html {
 .quantity-box span {
   width: 43px;
   padding: 10px;
-  border: none;
   text-align: center;
   background: #fff;
 }
