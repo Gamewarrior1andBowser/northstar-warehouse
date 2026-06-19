@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "./ProductCard";
 
@@ -52,10 +53,8 @@ import ProductCard from "./ProductCard";
 // export default ProductSection;
 
 
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import ProductCard from "./ProductCard";
+
+
 
 function ProductSection({ setSelectedProduct }) {
   const [products, setProducts] = useState([]);
