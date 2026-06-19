@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Footer from  '../Components/Footer';
+import Header from '../Components/Header';
 
 function Cart() {
   const product = JSON.parse(localStorage.getItem("cart"));
@@ -8,6 +9,7 @@ function Cart() {
   if (!product) {
     return (
       <section className="cart-page">
+        <Header/>
         <h1>Your Cart</h1>
         <p>Your cart is empty.</p>
 
@@ -20,6 +22,7 @@ function Cart() {
 
   return (
     <section className="cart-page">
+      <Header/>
       <h1>Your Cart</h1>
 
       <div className="cart-layout">
