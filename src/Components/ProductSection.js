@@ -28,8 +28,6 @@ function ProductSection() {
     <section className="products-section" id="products">
       <h2>Our Products</h2>
 
-      {error && <p>{error}</p>}
-
       <select
         className="sort-select"
         value={sortType}
