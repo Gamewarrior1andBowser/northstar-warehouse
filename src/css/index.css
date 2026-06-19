@@ -434,8 +434,16 @@ main {
   text-align: center;
 }
 
-.delete-btn,
+
 .checkout-btn {
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.delete-btn{
+   background-color: rgb(244, 6, 6);
   color: white;
   border: none;
   padding: 12px 18px;
@@ -471,10 +479,35 @@ main {
   margin-top: 15px;
 }
 
+.checkout-btn:hover{
+   color: rgb(25, 48, 117);
+   background-color: white;
+}
+
 .continue-shopping {
-  display: inline-block;
-  margin-top: 20px;
-  color: #42bff5;
+  display: block;
+  width: 100%;
+
+  margin-top: 15px;
+  padding: 12px 18px;
+
+  text-align: center;
+  text-decoration: none;
+
+  background-color: transparent;
+  color: rgb(25, 48, 117);
+
+  border: 2px solid rgb(25, 48, 117);
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.continue-shopping:hover {
+  background-color: rgb(25, 48, 117);
+  color: white;
 }
 
 @media (max-width: 800px) {
