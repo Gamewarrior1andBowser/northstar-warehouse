@@ -15,28 +15,6 @@ function ProductSection() {
       .catch(() => setError("Unable to load products."));
   }, []);
 
-//   useEffect(() => {
-//   axios
-//     .get(`https://fakestoreapi.com/products/${id}`)
-//     .then(response => {
-//       if (!response.data) {          // ← ADD THIS
-//         navigate("/northstar-warehouse");
-//         return;
-//       }
-//       setProduct(response.data);
-//       return axios.get("https://fakestoreapi.com/products");
-//     })
-//     .then(response => {
-//       if (!response) return;         // ← ADD THIS (guards the chained .then)
-//       const similar = response.data
-//         .filter(item => item.category === product?.category && item.id !== Number(id))
-//         .slice(0, 4);
-//       setSimilarProducts(similar);
-//     })
-//     .catch(() => {
-//       navigate("/northstar-warehouse");
-//     });
-// }, [id, navigate, product?.category]);
 
   const sortedProducts = [...products].sort((a, b) => {
     if (sortType === "price") {
@@ -47,7 +25,7 @@ function ProductSection() {
 
   return (
     <section className="products-section">
-      <h2>Our Products</h2>
+      <p className="title">Our Products</p>
 
       <select
         className="sort-select"

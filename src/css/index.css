@@ -72,6 +72,11 @@ body {
   font-size: 32px;
 }
 
+.title {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -84,8 +89,13 @@ html {
 .product-btn{
   font-size: 20px;
   background-color: #42bff5;
-  border-radius: 20px;
-  padding: 5px 10px;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.product-btn:hover {
+  
 }
 
 .products-section h2 {
@@ -109,10 +119,11 @@ html {
   color: #171820;
   padding: 25px;
   border-radius: 16px;
-  min-height: 380px;
+  height: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .product-card img {
@@ -123,14 +134,16 @@ html {
 }
 
 .product-card h3 {
-  font-size: 1rem;
-  margin-bottom: 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .product-price {
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  color: rgb(2, 90, 2);
 }
+
 
 .view-btn {
   text-decoration: none;
@@ -139,6 +152,7 @@ html {
   padding: 10px 18px;
   border-radius: 8px;
   font-weight: bold;
+  position: relative;
 }
 
 .error {
